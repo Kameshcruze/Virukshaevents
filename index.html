@@ -1,19 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Viruksha Events | Event Planners in Tiruppur</title>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title & Description -->
+  <title>Viruksha Events | Event Planners in Tiruppur</title>
+  <meta name="description" content="Viruksha Events offers wedding decoration, stage decor, corporate events, birthdays, housewarmings, cultural functions, and more across Tamil Nadu and South India. Based in Tirupur, Coimbatore.">
+  <link rel="canonical" href="https://virukshaevents.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Viruksha Events | Event Planners in Tiruppur">
+  <meta property="og:description" content="Wedding planners and event managers serving Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, and Telangana.">
+  <meta property="og:image" content="https://virukshaevents.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://virukshaevents.com/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Viruksha Events">
+  <meta name="twitter:description" content="Event planners for weddings, corporate events, birthdays, and housewarmings across South India.">
+  <meta name="twitter:image" content="https://virukshaevents.com/assets/twitter-image.jpg">
+
+  <!-- Remixicon & Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Viruksha Events",
+    "url": "https://virukshaevents.com",
+    "logo": "https://virukshaevents.com/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/virukshaevents",
+      "https://www.instagram.com/virukshaevents"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+91-XXXXXXXXXX",
+      "contactType": "customer service",
+      "areaServed": ["Tamil Nadu","Kerala","Karnataka","Andhra Pradesh","Telangana"],
+      "availableLanguage": ["English","Tamil"]
+    }],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Your Street Address",
+      "addressLocality": "Tirupur",
+      "addressRegion": "TN",
+      "postalCode": "641XXX",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <!-- Services Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Viruksha Events Services",
+    "itemListElement": [
+      { "@type": "Service", "serviceType": "Wedding Decoration" },
+      { "@type": "Service", "serviceType": "Stage Decoration" },
+      { "@type": "Service", "serviceType": "Corporate Events" },
+      { "@type": "Service", "serviceType": "Birthday Party" },
+      { "@type": "Service", "serviceType": "Puberty Function" },
+      { "@type": "Service", "serviceType": "Baby Shower Function" },
+      { "@type": "Service", "serviceType": "Theme Wedding" },
+      { "@type": "Service", "serviceType": "Family Functions" },
+      { "@type": "Service", "serviceType": "Cultural Events" },
+      { "@type": "Service", "serviceType": "Manavarai Decoration" },
+      { "@type": "Service", "serviceType": "Cradle Ceremony" },
+      { "@type": "Service", "serviceType": "Garlands" },
+      { "@type": "Service", "serviceType": "Pachaipanthal" },
+      { "@type": "Service", "serviceType": "Balloon Decoration" },
+      { "@type": "Service", "serviceType": "Remo Light Arch" },
+      { "@type": "Service", "serviceType": "Couple Concept Entry" },
+      { "@type": "Service", "serviceType": "Pathway Decoration" },
+      { "@type": "Service", "serviceType": "House Warming" },
+      { "@type": "Service", "serviceType": "Showroom Opening" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you manage destination weddings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Viruksha Events plans and executes destination weddings across South India including beach resorts and heritage venues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which districts do you serve in Tamil Nadu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve Coimbatore, Erode, Tirupur, Karur, Salem, Namakkal, Tiruchy, Madurai, Palani and other districts across Tamil Nadu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide corporate event management?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We organize corporate events including product launches, showroom openings, conferences, and team celebrations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Viruksha Events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach us via phone at +91-XXXXXXXXXX or email at info@virukshaevents.com. Our office is based in Tirupur, Coimbatore."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://virukshaevents.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://virukshaevents.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Wedding Decoration",
+        "item": "https://virukshaevents.com/services/wedding-decoration"
+      }
+    ]
+  }
+  </script> -->
+</head>
+
   <body>
     <header class="header" id="home">
       <nav>
@@ -329,7 +473,7 @@
       </div>
     </section>
 
-    <section class="blog" id="blog">
+    <!-- <section class="blog" id="blog">
       <div class="section__container blog__container">
         <div class="blog__content">
           <h2 class="section__header">~ LATEST BLOG ~</h2>
@@ -347,7 +491,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 <!-- <section class="section__container instagram__container">
   <h2 class="section__header">~ INSTAGRAM ~</h2>
