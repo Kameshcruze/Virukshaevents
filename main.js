@@ -164,3 +164,30 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(statsSection);
 
 
+
+
+
+const instaSwiper = new Swiper(".insta-swiper", {
+  loop: true,
+  speed: 800,
+
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+  centeredSlides: false,      // REMOVE centeredSlides
+  loopAdditionalSlides: 1,    // stabilizes loop
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+
+  pagination: {
+    el: ".insta-swiper .swiper-pagination",
+    clickable: true,
+  },
+
+  allowTouchMove: true,
+});
+

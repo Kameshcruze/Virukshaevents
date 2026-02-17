@@ -75,11 +75,20 @@ body {
 .header {
   min-height: 600px;
   background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
-    url("assets/banner-1.webp");
+     url("assets/portfolio-2.jpg"); /*add portrait image */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media (min-width: 768px) {
+  .header {
+    min-height: 650px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
+      url("assets/banner2.jpg"); /* Landscape image */
+  }
+}
+
 
 nav {
   position: fixed;
@@ -653,11 +662,7 @@ nav {
 
 
 
-.instagram-media {
-  margin: 0 !important;
-  max-width: 340px !important;
-  min-width: 300px !important;
-}
+
 
 
 
@@ -678,49 +683,68 @@ nav {
   margin-bottom: 3rem;
 }
 
-/* Carousel track */
-.insta-track {
+/* Carousel track insta scroll */
+/* .insta-track {
   display: flex;
   gap: 1.8rem;
   width: max-content;
   animation: instaLoop 35s linear infinite;
+} */
+
+
+.insta-swiper {
+  width: 100%;
+  overflow: hidden;
 }
 
 
-/* Individual embed card */
+
+.instagram-media {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Control card width */
 .insta-item {
-  background: linear-gradient(180deg, #111, #050505);
-  padding: 10px;
-  border-radius: 16px;
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.7),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-  transition: transform 0.4s ease;
-  max-width: 360px;
+  display: flex;
+  justify-content: center;
 }
 
+/* Keep slide full width */
+.swiper-slide.insta-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Control inner embed width safely */
 .instagram-media {
-  margin: 0 !important;
-  max-width: 340px !important;
-  min-width: 300px !important;
+  width: 100% !important;
+  max-width: 450px !important;   /* desktop size */
 }
 
-/* Lift on hover */
-.insta-item:hover {
-  transform: translateY(-6px);
-}
-
-/* Remove Instagram default margins */
-.instagram-media {
-  margin: 0 !important;
-}
-
-/* Infinite loop */
-@keyframes instaLoop {
-  to {
-    transform: translateX(-50%);
+/* Mobile full width */
+@media (max-width: 768px) {
+  .instagram-media {
+    max-width: 100% !important;
   }
 }
+
+
+@media (max-width: 768px) {
+  .insta-item {
+    max-width: 100%;
+  }
+
+  .instagram-media {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+.insta-item iframe {
+  border-radius: 16px;
+}
+
 
 
 
@@ -973,3 +997,4 @@ nav {
     gap: 1.5rem;
   }
 }
+
