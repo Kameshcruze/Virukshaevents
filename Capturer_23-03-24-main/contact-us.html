@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact Us | Viruksha Events</title> <!-- FAQPage Schema -->
+    <script
+        type="application/ld+json"> { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [ { "@type": "Question", "name": "Do you manage destination weddings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Viruksha Events plans and executes destination weddings across South India including Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, and Telangana." } }, { "@type": "Question", "name": "Which districts do you serve in Tamil Nadu?", "acceptedAnswer": { "@type": "Answer", "text": "We serve Coimbatore, Erode, Tirupur, Karur, Salem, Namakkal, Tiruchy, Madurai, Palani and other districts across Tamil Nadu." } }, { "@type": "Question", "name": "Do you provide event management outside Tamil Nadu?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We also manage events in Kerala, Karnataka, Andhra Pradesh, and Telangana, offering complete wedding and corporate solutions." } }, { "@type": "Question", "name": "Do you provide corporate event management?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We organize corporate events including product launches, showroom openings, conferences, and team celebrations across South India." } }, { "@type": "Question", "name": "Do you handle traditional family functions?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We specialize in weddings, puberty functions, baby showers, cradle ceremonies, and cultural events with authentic decor." } }, { "@type": "Question", "name": "Can you customize themes and decorations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide theme weddings, pathway decorations, balloon setups, garlands, and personalized decor concepts tailored to your vision." } }, { "@type": "Question", "name": "How can I contact Viruksha Events?", "acceptedAnswer": { "@type": "Answer", "text": "You can reach us via phone at +91-XXXXXXXXXX or email at info@virukshaevents.com. Our office is based in Tirupur, Coimbatore." } } ] } </script>
+    <style>
+        /* Contact Page Specific Styles Only */
+
+        .contact__hero {
+            margin-top: 120px;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("assets/contact/contact-banner.webp");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .contact__hero h2 {
+            font-size: 2.8rem;
+            font-family: var(--header-font);
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+
+
+        .contact__wrapper {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .contact__form {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .contact__form:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact__form h3 {
+            margin-bottom: 1.5rem;
+            font-family: var(--header-font);
+        }
+
+        .contact__form input,
+        .contact__form textarea {
+            width: 100%;
+            padding: 0.9rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .contact__form input:focus,
+        .contact__form textarea:focus {
+            border-color: #111;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact__info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info__box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+            transition: 0.4s;
+        }
+
+        .info__box:hover {
+            transform: translateY(-5px);
+        }
+
+        .map__box iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        @media (max-width: 900px) {
+            .contact__wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+        .contact-page .header {
+            position: relative;
+            min-height: 700px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("assets/contact/contact-banner.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (min-width: 991px) {
+
+            .contact-header-overlay {
+                position: absolute;
+                top: 450px;
+                right: 730px;
+                transform: translateY(-50%);
+                width: 420px;
+            }
+
+            .header-form-box {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 991px) {
+
+            .contact-page .header {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 80px;
+            }
+
+            .contact-header-overlay {
+                position: relative;
+                transform: none;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .header-form-box {
+                width: 90%;
+                max-width: 420px;
+            }
+
+        }
+
+
+
+
+
+
+
+        .header-form-box {
+            width: 90%;
+            max-width: 420px;
+            /* controls red box width */
+            padding: 2rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+
+
+
+
+
+        .contact-header-overlay h2 {
+            font-size: 2.8rem;
+            font-family: var(--header-font);
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+
+
+
+
+        .header-form-box input,
+        .header-form-box textarea {
+            width: 100%;
+            padding: 0.9rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        /* Small pink label */
+        .contact-mini-title {
+            color: #000000;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        /* ===== COLORED CONTACT INFO CARDS ===== */
+
+        .contact__info .info__box {
+            background: #fff;
+            border-left: 5px solid transparent;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Address */
+        .contact__info .info__box:nth-child(1) {
+            border-left-color: #6c63ff;
+        }
+
+        /* Call */
+        .contact__info .info__box:nth-child(2) {
+            border-left-color: #ff9800;
+        }
+
+        /* Email */
+        .contact__info .info__box:nth-child(3) {
+            border-left-color: #ff2e88;
+        }
+
+        .contact__info .info__box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Gradient glow animation */
+        .contact__info .info__box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.8s;
+        }
+
+        .contact__info .info__box:hover::before {
+            left: 100%;
+        }
+
+        /* ===== SIDE FLOATING DESIGNS ===== */
+
+        .side-design {
+            position: fixed;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.15;
+            animation: floatMove 6s ease-in-out infinite alternate;
+        }
+
+        .side-design.left {
+            left: -80px;
+            top: 50%;
+            background: radial-gradient(circle, #6c63ff, transparent 70%);
+        }
+
+        .side-design.right {
+            right: -80px;
+            top: 60%;
+            background: radial-gradient(circle, #ff2e88, transparent 70%);
+            animation-delay: 2s;
+        }
+
+        @keyframes floatMove {
+            from {
+                transform: translateY(-30px);
+            }
+
+            to {
+                transform: translateY(30px);
+            }
+        }
+
+
+
+        .header-form-box {
+            margin: 0 auto 0 auto;
+            /* controlled overlap */
+            position: relative;
+            z-index: 2;
+        }
+
+
+
+        .form-title {
+            font-size: 2.2rem;
+            font-family: var(--header-font);
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-flex {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            font-size: 28px;
+            padding: 14px;
+            border-radius: 12px;
+            background: #f5f5f5;
+        }
+
+        .info-icon.purple {
+            color: #6c63ff;
+        }
+
+        .info-icon.orange {
+            color: #ff9800;
+        }
+
+        .info-icon.pink {
+            color: #ff2e88;
+        }
+
+        @media (max-width: 768px) {
+            .contact-page .header {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url("/assets/contact/mobile/ban_1.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+  /* ===== POPUP OVERLAY ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.65);
+  display: none;            /* hidden initially */
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  z-index: 99999;
+  padding: 20px;            /* prevents edge touch on mobile */
+}
+
+/* ===== POPUP BOX ===== */
+.popup-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Call Button */
+.call-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #b88a44;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.call-btn:hover {
+  background: #9c7235;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+    </style>
+</head>
+
+<body class="contact-page">
+
+    <!-- ===== HEADER (Exact Copy) ===== -->
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <img src="assets/logo-white.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT US</a></li>
+                <li><a href="index.html#service">SERVICES</a></li>
+                <li class="nav__logo">
+                    <a href="index.html">
+                        <img src="assets/logo-white.png" alt="logo" />
+                    </a>
+                </li>
+                <li><a href="index.html#client">CLIENT</a></li>
+                <li><a href="index.html#blog">BLOG</a></li>
+                <li><a href="contact-us.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <div class="contact-header-overlay">
+            <div class="header-form-box">
+
+                <p class="contact-mini-title">GET IN TOUCH</p>
+                <h2 class="form-title">Share Us Your Query</h2>
+
+
+
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Full Name" required />
+                    <input type="email" name="email" placeholder="Email Address" required />
+                    <input type="tel" name="phone" placeholder="Phone Number" required />
+                    <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Submit Now</button>
+
+                </form>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- ===== CONTACT CONTENT ===== -->
+    <section class="contact__wrapper">
+
+
+
+
+        <div class="contact__info">
+            <div class="info__box">
+                <div class="info-flex">
+                    <i class="ri-map-pin-line info-icon purple"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>
+                            21 Green Valley Street<br>
+                            Near Central Park Avenue<br>
+                            Coimbatore, Tamil Nadu 641001
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="info__box">
+                <div class="info-flex">
+                    <i class="ri-phone-line info-icon orange"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>9999999999</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="info__box">
+                <div class="info-flex">
+                    <i class="ri-mail-line info-icon pink"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>virukshaevents.gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="map__box">
+                <iframe src="https://www.google.com/maps?q=coimbatore&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="section__container gallery__container">
+            <h2 class="section__header">GALLERY</h2>
+
+            <div class="gallery__grid">
+                <img src="assets/image-1.jpg" alt="">
+                <img src="assets/image-2.jpg" alt="">
+                <img src="assets/image-3.jpg" alt="">
+                <img src="assets/image-4.jpg" alt="">
+                <img src="assets/image-5.jpg" alt="">
+                <img src="assets/image-6.jpg" alt="">
+                <img src="assets/image-7.jpg" alt="">
+                <img src="assets/image-8.jpg" alt="">
+            </div>
+
+            <div class="gallery__btn">
+                <a href="gallery.html">
+                    <button class="btn">VIEW GALLERY</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq__section" id="faq">
+        <div class="section__container">
+            <h2 class="section__header"><b>Frequently Asked Questions</b></h2>
+            <div class="faq__grid">
+
+                <div class="faq__item">
+                    <h4>Do you manage destination weddings?</h4>
+                    <p>Yes. Viruksha Events plans and executes destination weddings across South India including Tamil
+                        Nadu,
+                        Kerala, Karnataka, Andhra Pradesh, and Telangana.</p>
+                </div>
+
+                <div class="faq__item">
+                    <h4>Which districts do you serve in Tamil Nadu?</h4>
+                    <p>We serve Coimbatore, Erode, Tirupur, Karur, Salem, Namakkal, Tiruchy, Madurai, Palani and other
+                        districts
+                        across Tamil Nadu.</p>
+                </div>
+
+                <div class="faq__item">
+                    <h4>Do you provide event management outside Tamil Nadu?</h4>
+                    <p>Yes. We also manage events in Kerala, Karnataka, Andhra Pradesh, and Telangana, offering complete
+                        wedding
+                        and corporate solutions.</p>
+                </div>
+
+                <div class="faq__item">
+                    <h4>Do you provide corporate event management?</h4>
+                    <p>Yes. We organize corporate events including product launches, showroom openings, conferences, and
+                        team
+                        celebrations across South India.</p>
+                </div>
+
+                <div class="faq__item">
+                    <h4>Do you handle traditional family functions?</h4>
+                    <p>Absolutely. We specialize in weddings, puberty functions, baby showers, cradle ceremonies, and
+                        cultural
+                        events with authentic decor.</p>
+                </div>
+
+                <div class="faq__item">
+                    <h4>Can you customize themes and decorations?</h4>
+                    <p>Yes. We provide theme weddings, pathway decorations, balloon setups, garlands, and personalized
+                        decor
+                        concepts tailored to your vision.</p>
+                </div>
+
+                <div class="faq__item">
+                    <h4>How can I contact Viruksha Events?</h4>
+                    <p>You can reach us via phone at +91-XXXXXXXXXX or email at info@virukshaevents.com. Our office is
+                        based in
+                        Tirupur, Coimbatore.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER (Exact Copy) ===== -->
+    <footer>
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <img src="assets/logo-dark.png" alt="logo" />
+                <div class="footer__socials">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <a href="#"><i class="ri-pinterest-line"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__links">
+                    <li><a href="index.html#home">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT US</a></li>
+                    <li><a href="index.html#service">SERVICES</a></li>
+                    <li><a href="index.html#client">CLIENT</a></li>
+                    <li><a href="index.html#blog">BLOG</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>STAY IN TOUCH</h4>
+                <p>
+                    Keep up-to-date with all things Viruksha Events.
+                </p>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2026 Viruksha Events. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating Buttons (Exact Same) -->
+    <a href="https://wa.me/919999999999" class="floating-btn whatsapp" target="_blank">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <a href="tel:+919999999999" class="floating-btn call">
+        <i class="ri-phone-line"></i>
+    </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+
+    <div class="side-design left"></div>
+    <div class="side-design right"></div>
+
+
+    <!-- Popup Modal -->
+<div id="callPopup" class="popup-overlay">
+  <div class="popup-box">
+    <span class="popup-close" id="closePopup">&times;</span>
+    <h2>Plan Your Perfect Event</h2>
+    <p>Call Virukshaa Events now to know more details and discuss your package.</p>
+    <a href="tel:+919876543210" class="call-btn">Call Now</a>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const popup = document.getElementById("callPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  // Show popup after 10 seconds
+  setTimeout(function () {
+    popup.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }, 10000);
+
+  // Close popup
+  closeBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  // Close when clicking outside box
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+
+});
+</script>
+
+
+</body>
+
+</html>
