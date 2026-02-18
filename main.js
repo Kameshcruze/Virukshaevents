@@ -191,3 +191,70 @@ const instaSwiper = new Swiper(".insta-swiper", {
   allowTouchMove: true,
 });
 
+/* ===============================
+   Contact Form → Google Sheets
+   =============================== */
+
+const form = document.getElementById("contactForm");
+
+if (form) {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxO3Y39lEAqus772kqdmoVLDxSjFQVvy7E1F6QGtKHPXVsczSqmaHWU30xOauA1SIDp/exec";
+
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+   
+   fetch(scriptURL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  body: new URLSearchParams(data),
+})
+
+      .then((res) => res.json())
+      .then(() => {
+        alert("Submitted successfully");
+        form.reset();
+      })
+      .catch((err) => {
+        alert("Submission failed");
+        console.error(err);
+      });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const popup = document.getElementById("callPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  // Show popup after 10 seconds
+  setTimeout(function () {
+    popup.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }, 10000);
+
+  // Close popup
+  closeBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  // Close when clicking outside box
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+
+});
+
+
+
+
