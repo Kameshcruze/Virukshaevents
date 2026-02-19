@@ -953,7 +953,7 @@ nav {
    =============================== */
 
 .faq__section {
-  background: #38805c;
+  background: #f9f9f9;
   padding: 5rem 1rem;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -996,98 +996,5 @@ nav {
   .faq__grid {
     gap: 1.5rem;
   }
-}
-
-/* Popup Overlay */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: none; /* hidden initially */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-
-
-/* Popup Box */
-.popup-box {
-  background: #fff;
-  width: 90%;
-  max-width: 400px;
-  padding: 30px 25px;
-  border-radius: 12px;
-  text-align: center;
-  position: relative;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.popup-box h2 {
-  margin-bottom: 15px;
-}
-
-.popup-box p {
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
-       /* --------- Call Button popup -------------*/
-/* ===== POPUP OVERLAY ===== */
-.popup-overlay {
-  position: fixed;
-  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
-  background: rgba(0,0,0,0.65);
-  display: none;            /* hidden initially */
-  justify-content: center;  /* horizontal center */
-  align-items: center;      /* vertical center */
-  z-index: 99999;
-  padding: 20px;            /* prevents edge touch on mobile */
-}
-
-/* ===== POPUP BOX ===== */
-.popup-box {
-  background: #ffffff;
-  width: 100%;
-  max-width: 420px;
-  padding: 30px 25px;
-  border-radius: 16px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Close Button */
-.popup-close {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Call Button */
-.call-btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #b88a44;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.call-btn:hover {
-  background: #9c7235;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
 }
 

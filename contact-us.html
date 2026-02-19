@@ -351,61 +351,7 @@
             }
         }
 
-  /* ===== POPUP OVERLAY ===== */
-.popup-overlay {
-  position: fixed;
-  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
-  background: rgba(0,0,0,0.65);
-  display: none;            /* hidden initially */
-  justify-content: center;  /* horizontal center */
-  align-items: center;      /* vertical center */
-  z-index: 99999;
-  padding: 20px;            /* prevents edge touch on mobile */
-}
-
-/* ===== POPUP BOX ===== */
-.popup-box {
-  background: #ffffff;
-  width: 100%;
-  max-width: 420px;
-  padding: 30px 25px;
-  border-radius: 16px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Close Button */
-.popup-close {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Call Button */
-.call-btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #b88a44;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.call-btn:hover {
-  background: #9c7235;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
+ 
 
     </style>
 </head>
@@ -646,45 +592,8 @@
     <div class="side-design right"></div>
 
 
-    <!-- Popup Modal -->
-<div id="callPopup" class="popup-overlay">
-  <div class="popup-box">
-    <span class="popup-close" id="closePopup">&times;</span>
-    <h2>Plan Your Perfect Event</h2>
-    <p>Call Virukshaa Events now to know more details and discuss your package.</p>
-    <a href="tel:+919876543210" class="call-btn">Call Now</a>
-  </div>
-</div>
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const popup = document.getElementById("callPopup");
-  const closeBtn = document.getElementById("closePopup");
-
-  // Show popup after 10 seconds
-  setTimeout(function () {
-    popup.style.display = "flex";
-    document.body.style.overflow = "hidden";
-  }, 10000);
-
-  // Close popup
-  closeBtn.addEventListener("click", function () {
-    popup.style.display = "none";
-    document.body.style.overflow = "auto";
-  });
-
-  // Close when clicking outside box
-  popup.addEventListener("click", function (e) {
-    if (e.target === popup) {
-      popup.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-  });
-
-});
-</script>
 
 
 </body>
