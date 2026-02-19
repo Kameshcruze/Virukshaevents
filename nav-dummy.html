@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Dummy</title>
+
+    <!-- Same external CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Override ONLY header height -->
+    <style>
+        .header {
+            min-height: 220px !important;
+            /* 1/3 of original */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="home">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="#">
+                        <img src="assets/logo-white.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+
+            <ul class="nav__links" id="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">SERVICES</a></li>
+
+                <li class="nav__logo">
+                    <a href="#">
+                        <img src="assets/logo-white.png" alt="logo" />
+                    </a>
+                </li>
+
+                <li><a href="#">CLIENT</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <!-- SOCIAL ICONS -->
+            <div class="nav__socials">
+                <a href="https://www.instagram.com/virukshaevents" target="_blank">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://www.facebook.com/virukshaevents" target="_blank">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dummy filler section -->
+    <div style="height:800px; background:#f3f3f3;"></div>
+
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919999999999" class="floating-btn whatsapp" target="_blank">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <!-- Floating Call -->
+    <a href="tel:+919999999999" class="floating-btn call">
+        <i class="ri-phone-line"></i>
+    </a>
+
+
+    <!-- Same JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
