@@ -1,427 +1,1415 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viruksha Events | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
-<script src="main.js"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YEXQL0RTR0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<style>
-:root{
-  --primary:#0f3d2e;
-  --secondary:#1f5f46;
-  --accent:#4CAF50;
-  --light:#f4fbf6;
-}
+  gtag('config', 'G-YEXQL0RTR0');
+</script>
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+  <title>Virukshaa Events | Gallery</title>
+  <link rel="icon" type="image/png" href="assets/logo-dark.png">
+  <link rel="shortcut icon" type="image/png" href="assets/logo-dark.png">
+  <link rel="apple-touch-icon" href="assets/logo-dark.png">
 
-body{
-  background:var(--light);
-  overflow-x:hidden;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preload" as="font" href="assets/Fonts/angelina_malika/angelina-malika.ttf?v=3" type="font/ttf" crossorigin />
 
-/* ================= NAVBAR ================= */
+  <style>
+    @font-face {
+      font-family: "Angelina Malika";
+      src: local("Angelina Malika"),
+        url("/assets/Fonts/angelina_malika/angelina-malika.ttf?v=3") format("truetype"),
+        url("assets/Fonts/angelina_malika/angelina-malika.ttf?v=3") format("truetype"),
+        url("/assets/fonts/angelina_malika/angelina-malika.ttf?v=3") format("truetype"),
+        url("assets/fonts/angelina_malika/angelina-malika.ttf?v=3") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
 
-.header{
-  position:fixed;
-  width:100%;
-  top:0;
-  left:0;
-  z-index:1000;
-  transition:0.3s ease;
-}
+    :root {
+      --text-dark: #171717;
+      --text-light: #525252;
+      --white: #ffffff;
+      --gold: #b88a44;
+      --page-bg: #0c0c0e;
+      --panel: #111214;
+      --border: rgba(255, 255, 255, 0.08);
+      --max-width: 1200px;
+      --header-font: "Merriweather", serif;
+    }
 
-.nav{
-  height:70px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 8%;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.nav__logo a{
-  color:#fff;
-  font-weight:600;
-  font-size:18px;
-  text-decoration:none;
-}
+    html,
+    body {
+      scroll-behavior: smooth;
+    }
 
-.nav__menu{
-  display:flex;
-}
+    body {
+      font-family: "Montserrat", sans-serif;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.8)),
+        radial-gradient(circle at top, rgba(184, 138, 68, 0.16), transparent 30%),
+        var(--page-bg);
+      color: var(--white);
+    }
 
-.nav__list{
-  display:flex;
-  align-items:center;
-  gap:30px;
-  list-style:none;
-}
+    img {
+      display: block;
+      width: 100%;
+    }
 
-.nav__link{
-  color:#fff;
-  text-decoration:none;
-  font-size:14px;
-  transition:0.3s;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-.nav__link:hover,
-.active-link{
-  color:var(--accent);
-}
+    .page-header {
+      min-height: 340px;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.78)),
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.08), transparent 45%),
+        url("assets/banner2.jpeg") center center / cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
 
-.nav__btn{
-  background:var(--accent);
-  padding:8px 18px;
-  border-radius:20px;
-  color:#fff;
-  text-decoration:none;
-  font-size:13px;
-  transition:0.3s;
-}
+    .page-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.55), transparent 35%, transparent 65%, rgba(0, 0, 0, 0.55)),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0));
+      pointer-events: none;
+    }
 
-.nav__btn:hover{
-  background:#3a9c3f;
-}
+    nav {
+      position: fixed;
+      isolation: isolate;
+      top: 0;
+      width: 100%;
+      max-width: var(--max-width);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+    }
 
-.nav__toggle{
-  display:none;
-  font-size:22px;
-  color:#fff;
-  cursor:pointer;
-}
+    nav.nav-hidden {
+      transform: translate(-50%, -140%);
+      opacity: 0;
+    }
 
-/* Scroll Effect */
-.scroll-header{
-  background:var(--primary);
-}
+    .nav__header {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background-color: rgba(23, 23, 23, 0.92);
+      backdrop-filter: blur(10px);
+    }
 
-/* ================= HERO ================= */
+    .nav__logo img {
+      max-width: 70px;
+    }
 
-.hero{
-  height:60vh;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url("https://images.unsplash.com/photo-1519225421980-715cb0215aed") center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-}
+    .nav__menu__btn {
+      font-size: 1.5rem;
+      color: var(--white);
+      cursor: pointer;
+    }
 
-.hero h1{
-  font-size:40px;
-  font-weight:600;
-}
+    .nav__links {
+      list-style: none;
+      position: absolute;
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: rgba(23, 23, 23, 0.96);
+      transform: translateY(-100%);
+      transition: 0.35s ease;
+      z-index: -1;
+    }
 
-/* ================= FILTER ================= */
+    .nav__links.open {
+      transform: translateY(0);
+    }
 
-.filter-section{
-  text-align:center;
-  padding:60px 5% 20px;
-}
+    .nav__links .nav__logo {
+      display: none;
+    }
 
-.filter-btn{
-  padding:8px 20px;
-  margin:5px;
-  border:none;
-  cursor:pointer;
-  background:var(--secondary);
-  color:#fff;
-  border-radius:20px;
-  font-size:13px;
-  transition:0.3s;
-}
+    .nav__links a {
+      padding-bottom: 5px;
+      font-weight: 500;
+      color: var(--white);
+      border-bottom: 2px solid transparent;
+      letter-spacing: 0.04em;
+    }
 
-.filter-btn.active,
-.filter-btn:hover{
-  background:var(--accent);
-}
+    .nav__links a:hover,
+    .nav__links a.active {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
 
+    .nav__socials {
+      display: flex;
+      gap: 12px;
+    }
 
-.header{
-  min-height: 250px !important;
-}
+    .nav__socials a {
+      font-size: 22px;
+      color: var(--white);
+      transition: 0.3s;
+    }
 
-@media (width > 768px){
-  .header{
-    min-height: 300px !important;
-  }
-}
+    .nav__socials a:hover {
+      color: var(--gold);
+    }
 
+    .hero-copy {
+      min-height: 340px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 7.5rem 1rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ================= GALLERY ================= */
+    .hero-copy h1 {
+      font-size: clamp(2.05rem, 4.2vw, 3.9rem);
+      font-family: "Angelina Malika", cursive;
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: 0.01em;
+      color: var(--white);
+      text-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+      white-space: nowrap;
+    }
 
-.gallery-container{
-  column-count:3;
-  column-gap:15px;
-  padding:20px 8% 60px;
-}
+    .hero-copy h1 span {
+      color: inherit;
+    }
 
-.gallery-item{
-  margin-bottom:15px;
-  overflow:hidden;
-  border-radius:8px;
-  cursor:pointer;
-  position:relative;
-}
+    .gallery-wrap {
+      width: min(100%, 1500px);
+      margin: 0 auto;
+      padding: 0 12px 4rem;
+    }
 
-.gallery-item img{
-  width:100%;
-  transition:0.4s ease;
-  border-radius:8px;
-}
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      grid-auto-flow: dense;
+      background: #0c0c0e;
+      padding: 8px;
+    }
 
-.gallery-item:hover img{
-  transform:scale(1.08);
-}
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 170px;
+      background: var(--panel);
+      cursor: pointer;
+      content-visibility: auto;
+      contain-intrinsic-size: 240px 220px;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: transform 0.65s ease, opacity 0.65s ease;
+    }
 
-/* ================= LIGHTBOX ================= */
+    .gallery-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-.lightbox{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.85);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:2000;
-}
+    .gallery-card img,
+    .gallery-card video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(1.035);
+      transition: transform 0.7s ease, filter 0.45s ease, opacity 0.55s ease;
+    }
 
-.lightbox img{
-  max-width:85%;
-  max-height:85%;
-  border-radius:8px;
-}
+    .gallery-card.is-loaded img,
+    .gallery-card.is-loaded video {
+      opacity: 1;
+      transform: scale(1);
+    }
 
-.lightbox.active{
-  display:flex;
-}
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          110deg,
+          rgba(255, 255, 255, 0.03) 8%,
+          rgba(255, 255, 255, 0.16) 18%,
+          rgba(255, 255, 255, 0.03) 33%
+        ),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.16));
+      background-size: 220% 100%, 100% 100%;
+      animation: galleryShimmer 1.3s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 0.3s ease;
+    }
 
-/* ================= FOOTER ================= */
+    .gallery-card.is-loaded::before {
+      opacity: 0;
+    }
 
-footer{
-  background:var(--primary);
-  color:#fff;
-  text-align:center;
-  padding:20px;
-  font-size:13px;
-}
+    .gallery-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.35));
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: 1;
+    }
 
-/* ================= RESPONSIVE ================= */
+    .gallery-card:hover img,
+    .gallery-card:hover video {
+      transform: scale(1.04);
+      filter: saturate(1.05);
+    }
 
-@media(max-width:992px){
-  .gallery-container{
-    column-count:2;
-  }
-}
+    .gallery-card:hover::after {
+      opacity: 1;
+    }
 
-@media(max-width:768px){
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-card,
+      .gallery-card img,
+      .gallery-card video,
+      .gallery-card::before,
+      .gallery-card::after {
+        transition: none;
+        animation: none;
+      }
+    }
 
-  .nav__menu{
-    position:absolute;
-    top:70px;
-    right:-100%;
-    width:220px;
-    background:var(--primary);
-    padding:20px;
-    transition:0.3s ease;
-  }
+    @keyframes galleryShimmer {
+      0% {
+        background-position: 120% 0, 0 0;
+      }
+      100% {
+        background-position: -120% 0, 0 0;
+      }
+    }
 
-  .nav__menu.show-menu{
-    right:0;
-  }
+    .gallery-card:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: -3px;
+    }
 
-  .nav__list{
-    flex-direction:column;
-    gap:20px;
-  }
+    .wide {
+      grid-column: span 2;
+    }
 
-  .nav__toggle{
-    display:block;
-  }
+    .tall {
+      grid-row: span 2;
+      min-height: 348px;
+    }
 
-  .gallery-container{
-    column-count:1;
-  }
+    .hero-tile {
+      min-height: 290px;
+    }
 
-  .hero h1{
-    font-size:28px;
-  }
-}
-</style>
+    .floating-btn {
+      position: fixed;
+      bottom: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #fff;
+      z-index: 999;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s ease;
+    }
+
+    .floating-btn.whatsapp {
+      right: 24px;
+      background-color: #25d366;
+    }
+
+    .floating-btn.call {
+      left: 24px;
+      background-color: #111;
+      animation: none;
+    }
+
+    .floating-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .floating-btn.call.attention {
+      animation: popShake 1.2s ease forwards;
+    }
+
+    .floating-btn.call::after {
+      content: "Contact us";
+      position: absolute;
+      left: 70px;
+      white-space: nowrap;
+      background: #111;
+      color: #fff;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+    }
+
+    .floating-btn.call.show-tooltip::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 56px;
+      height: 56px;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #f8f3e8;
+      background: linear-gradient(135deg, #567c63, #2f5d45);
+      box-shadow: 0 10px 24px rgba(31, 53, 39, 0.24);
+      cursor: pointer;
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    }
+
+    .scroll-top-btn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top-btn:hover {
+      transform: translateY(0) scale(1.05);
+      box-shadow: 0 12px 28px rgba(31, 53, 39, 0.3);
+    }
+
+    .quote-chip {
+      position: fixed;
+      right: 96px;
+      bottom: 42px;
+      z-index: 998;
+      border: 1px solid rgba(17, 17, 17, 0.15);
+      background: #ffffff;
+      color: #111111;
+      padding: 0.85rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+      padding: 20px;
+    }
+
+    .popup-box {
+      background: #ffffff;
+      width: 100%;
+      max-width: 420px;
+      padding: 30px 25px;
+      border-radius: 16px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.3s ease-in-out;
+      color: #111111;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .popup-box h2 {
+      margin-bottom: 15px;
+      font-family: var(--header-font);
+    }
+
+    .popup-box p {
+      font-size: 15px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .call-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: var(--gold);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .call-btn:hover {
+      background: #9c7235;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99998;
+      padding: 2rem 5rem;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox__image,
+    .lightbox__video {
+      max-width: min(1200px, 100%);
+      max-height: 82vh;
+      object-fit: contain;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    }
+
+    .lightbox__video {
+      display: none;
+      width: min(1200px, 100%);
+      background: #000;
+    }
+
+    .lightbox__close,
+    .lightbox__nav {
+      position: absolute;
+      border: none;
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      backdrop-filter: blur(8px);
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .lightbox__close:hover,
+    .lightbox__nav:hover {
+      background: rgba(184, 138, 68, 0.9);
+      transform: scale(1.04);
+    }
+
+    .lightbox__close {
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 1.6rem;
+    }
+
+    .lightbox__nav {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      font-size: 1.75rem;
+    }
+
+    .lightbox__nav--prev {
+      left: 24px;
+    }
+
+    .lightbox__nav--next {
+      right: 24px;
+    }
+
+    footer {
+      background:
+        radial-gradient(circle at top left, rgba(31, 106, 59, 0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(77, 145, 98, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f3fbf4 22%, #e1f3e4 58%, #cfe8d5 100%);
+      margin-top: 2rem;
+    }
+
+    .section__container {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 5rem 1rem;
+    }
+
+    .footer__container {
+      display: grid;
+      gap: 4rem 0;
+      align-items: center;
+    }
+
+    .footer__col {
+      padding-inline: 2rem;
+    }
+
+    .footer__container img {
+      max-width: 170px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+
+    .footer__socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer__socials a {
+      font-size: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .footer__socials a:hover {
+      color: var(--text-light);
+    }
+
+    .footer__links {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .footer__links a {
+      display: block;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    .footer__links a:hover {
+      color: var(--text-light);
+    }
+
+    .footer__col h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    .footer__col p {
+      color: var(--text-light);
+      line-height: 1.75rem;
+      text-align: center;
+    }
+
+    .footer__bar {
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #a3a3a3;
+      background-color: var(--text-dark);
+      text-align: center;
+    }
+
+    @keyframes popShake {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      40% {
+        transform: scale(1.15);
+        opacity: 1;
+      }
+
+      60% {
+        transform: scale(0.95) rotate(-8deg);
+      }
+
+      75% {
+        transform: scale(1.05) rotate(8deg);
+      }
+
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: fixed;
+        left: 0;
+        transform: none;
+        max-width: none;
+      }
+
+      nav.nav-hidden {
+        transform: translateY(-140%);
+        opacity: 0;
+      }
+
+      .nav__header {
+        position: relative;
+        justify-content: flex-end;
+      }
+
+      .nav__header .nav__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .nav__header .nav__logo img {
+        max-width: 120px;
+      }
+
+      .nav__menu__btn {
+        position: relative;
+        z-index: 2;
+      }
+
+      .nav__socials {
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+
+      .nav__socials a {
+        font-size: 20px;
+      }
+
+      .page-header {
+        min-height: 300px;
+        background-position: 76% center;
+      }
+
+      .hero-copy {
+        min-height: 300px;
+        padding: 6.8rem 1rem 2.75rem;
+      }
+
+    .hero-copy h1 {
+      font-size: 2rem;
+      white-space: nowrap;
+    }
+
+      .gallery-wrap {
+        padding-bottom: 7rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        padding: 6px;
+      }
+
+      .gallery-card {
+        min-height: 120px;
+      }
+
+      .gallery-card.mobile-wide,
+      .wide,
+      .hero-tile {
+        grid-column: 1 / -1;
+      }
+
+      .tall {
+        min-height: 245px;
+        grid-row: span 1;
+      }
+
+      .quote-chip {
+        right: 78px;
+        bottom: 96px;
+        padding: 0.7rem 0.95rem;
+        font-size: 0.78rem;
+      }
+
+      .floating-btn.whatsapp {
+        right: 20px;
+        bottom: 88px;
+      }
+
+      .floating-btn.call {
+        right: 20px;
+        left: auto;
+        bottom: 156px;
+      }
+
+      .floating-btn.call::after {
+        left: auto;
+        right: 70px;
+      }
+
+      .scroll-top-btn {
+        right: 20px;
+        bottom: 20px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+      }
+
+      .lightbox {
+        padding: 1.5rem 1rem 6rem;
+      }
+
+      .lightbox__image,
+      .lightbox__video {
+        max-height: 72vh;
+      }
+
+      .lightbox__close {
+        top: 16px;
+        right: 16px;
+      }
+
+      .lightbox__nav {
+        top: auto;
+        bottom: 20px;
+        transform: none;
+        width: 50px;
+        height: 50px;
+      }
+
+      .lightbox__nav--prev {
+        left: calc(50% - 62px);
+      }
+
+      .lightbox__nav--next {
+        right: calc(50% - 62px);
+      }
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        padding: 2rem 1rem;
+        position: fixed;
+        width: min(1200px, calc(100% - 2rem));
+      }
+
+      .nav__header {
+        display: none;
+      }
+
+      .nav__links {
+        padding: 0;
+        width: 100%;
+        position: static;
+        transform: none;
+        display: grid;
+        grid-template-columns: repeat(3, max-content) 150px repeat(3, max-content);
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+        row-gap: 0;
+        background-color: transparent;
+      }
+
+      .nav__links .nav__logo {
+        display: block;
+        grid-column: 4;
+      }
+
+      .nav__links .nav__logo img {
+        max-width: 150px;
+      }
+
+      .nav__links li:nth-child(1) {
+        grid-column: 1;
+      }
+
+      .nav__links li:nth-child(2) {
+        grid-column: 2;
+      }
+
+      .nav__links li:nth-child(3) {
+        grid-column: 3;
+      }
+
+      .nav__links li:nth-child(5) {
+        grid-column: 5;
+      }
+
+      .nav__links li:nth-child(6) {
+        grid-column: 6;
+      }
+
+      .nav__links li:nth-child(7) {
+        grid-column: 7;
+      }
+
+      .nav__socials {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        justify-content: flex-end;
+      }
+
+      .footer__container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer__col:nth-child(1) {
+        grid-area: 1/2/2/3;
+        border-left: 2px solid var(--text-dark);
+        border-right: 2px solid var(--text-dark);
+      }
+
+      .footer__col:nth-child(3) {
+        border: none;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tall {
+        grid-row: span 1;
+        min-height: 250px;
+      }
+
+      .wide,
+      .hero-tile {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (min-width: 540px) and (max-width: 767px) {
+      .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer__col:nth-child(1) {
+        grid-area: 1/1/2/3;
+      }
+
+      .footer__col:nth-child(3) {
+        border-left: 2px solid var(--text-dark);
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header class="page-header" id="top">
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img loading="eager" decoding="async" fetchpriority="high" src="assets/Virukshaa-png-font.png" alt="Viruksha Events logo" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn" aria-label="Open menu">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
 
-<!-- ================= NAVBAR ================= -->
-<header class="header">
-  <nav>
-    <div class="nav__header">
-      <div class="nav__logo">
-        <a href="index.html">
-          <img src="assets/logo-white.png" alt="logo" />
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html#home">HOME</a></li>
+        <li><a href="index.html#about">ABOUT US</a></li>
+        <li><a href="index.html#service">SERVICES</a></li>
+        <li class="nav__logo">
+          <a href="index.html">
+            <img loading="eager" decoding="async" fetchpriority="high" src="assets/logo-white.png" alt="Viruksha Events logo" />
+          </a>
+        </li>
+        <li><a href="index.html#client">CLIENT</a></li>
+        <li><a href="gallery.html" class="active">GALLERY</a></li>
+        <li><a href="contact-us.html">CONTACT US</a></li>
+      </ul>
+
+      <div class="nav__socials">
+        <a href="https://www.instagram.com/virukshaa_events?igsh=MWUzZDQwejh6eHkxdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="ri-instagram-line"></i>
+        </a>
+        <a href="https://www.facebook.com/share/14basvDqmqv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="ri-facebook-fill"></i>
         </a>
       </div>
-      <div class="nav__menu__btn" id="menu-btn">
-        <i class="ri-menu-line"></i>
+    </nav>
+
+    <div class="hero-copy">
+      <h1>Moments We Decorated</h1>
+    </div>
+  </header>
+
+  <main class="gallery-wrap">
+    <section class="gallery-grid" aria-label="Gallery image grid" data-gallery-full></section>
+  </main>
+
+  <footer id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <img loading="lazy" decoding="async" fetchpriority="low" src="assets/logo-dark.png" alt="logo" />
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/share/14basvDqmqv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="https://www.instagram.com/virukshaa_events?igsh=MWUzZDQwejh6eHkxdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="https://www.instagram.com/virukshaa_events?igsh=MWUzZDQwejh6eHkxdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-twitter-fill"></i></a>
+          <a href="https://www.instagram.com/virukshaa_events?igsh=MWUzZDQwejh6eHkxdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-youtube-fill"></i></a>
+          <a href="https://www.instagram.com/virukshaa_events?igsh=MWUzZDQwejh6eHkxdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-pinterest-line"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <ul class="footer__links">
+          <li><a href="index.html#home">HOME</a></li>
+          <li><a href="index.html#about">ABOUT US</a></li>
+          <li><a href="index.html#service">SERVICES</a></li>
+          <li><a href="index.html#client">CLIENT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="contact-us.html">CONTACT US</a></li>
+        </ul>
       </div>
     </div>
+    <div class="footer__bar">
+      Copyright© 2026 Viruksha Events. All rights reserved.
+    </div>
+  </footer>
 
-    <ul class="nav__links" id="nav-links">
-      <li><a href="index.html#home">HOME</a></li>
-      <li><a href="index.html#about">ABOUT US</a></li>
-      <li><a href="index.html#service">SERVICES</a></li>
+  <button class="quote-chip" id="quoteTrigger" type="button">Get Quick Quote</button>
 
-      <li class="nav__logo">
-        <a href="index.html">
-          <img src="assets/logo-white.png" alt="logo" />
-        </a>
-      </li>
+  <a href="https://wa.me/919999999999" class="floating-btn whatsapp" target="_blank" aria-label="WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
 
-      <li><a href="index.html#client">CLIENT</a></li>
-      <li><a href="index.html#gallery">GALLERY</a></li>
-      <li><a href="contact-us.html">CONTACT US</a></li>
-    </ul>
-    <!-- SOCIAL ICONS -->
-  <div class="nav__socials">
-    <a href="https://www.instagram.com/virukshaevents" target="_blank">
-      <i class="ri-instagram-line"></i>
-    </a>
-    <a href="https://www.facebook.com/virukshaevents" target="_blank">
-      <i class="ri-facebook-fill"></i>
-    </a>
-  </div>
-  </nav>
-</header>
+  <a href="tel:+919999999999" class="floating-btn call" aria-label="Call">
+    <i class="ri-phone-line"></i>
+  </a>
 
+  <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Go to top">
+    <i class="ri-arrow-up-s-line"></i>
+  </button>
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-  <h1>Our Portfolio</h1>
-</section>
-
-<!-- ================= FILTER ================= -->
-
-<section class="filter-section">
-  <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="wedding">Weddings</button>
-  <button class="filter-btn" data-filter="corporate">Corporate</button>
-  <button class="filter-btn" data-filter="traditional">Traditional</button>
-  <button class="filter-btn" data-filter="stage">Stage Decor</button>
-</section>
-
-<!-- ================= GALLERY ================= -->
-
-<section class="gallery-container">
-
-  <div class="gallery-item wedding">
-    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf" alt="">
+  <div id="callPopup" class="popup-overlay">
+    <div class="popup-box">
+      <span class="popup-close" id="closePopup">&times;</span>
+      <h2>Plan Your Perfect Event</h2>
+      <p>Call Viruksha Events now to know more details and discuss your package.</p>
+      <a href="tel:+919876543210" class="call-btn">Call Now</a>
+    </div>
   </div>
 
-  <div class="gallery-item corporate">
-    <img src="https://images.unsplash.com/photo-1503424886307-b090341d25d1" alt="">
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close image viewer">
+      <i class="ri-close-line"></i>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Previous image">
+      <i class="ri-arrow-left-s-line"></i>
+    </button>
+    <img loading="lazy" decoding="async" fetchpriority="low" class="lightbox__image" id="lightboxImage" src="" alt="" />
+    <video class="lightbox__video" id="lightboxVideo" controls playsinline></video>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Next image">
+      <i class="ri-arrow-right-s-line"></i>
+    </button>
   </div>
 
-  <div class="gallery-item traditional">
-    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e" alt="">
-  </div>
+  <script src="gallery-data.js"></script>
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const menuIcon = menuBtn ? menuBtn.querySelector("i") : null;
+    const siteNav = document.querySelector("nav");
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    let lastScrollY = window.scrollY;
 
-  <div class="gallery-item stage">
-    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063" alt="">
-  </div>
+    if (menuBtn && navLinks && menuIcon) {
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        siteNav?.classList.remove("nav-hidden");
+        menuIcon.setAttribute("class", navLinks.classList.contains("open") ? "ri-close-line" : "ri-menu-line");
+      });
 
-  <div class="gallery-item wedding">
-    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486" alt="">
-  </div>
+      navLinks.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuIcon.setAttribute("class", "ri-menu-line");
+      });
+    }
 
-  <div class="gallery-item corporate">
-    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754" alt="">
-  </div>
+    const popup = document.getElementById("callPopup");
+    const closeBtn = document.getElementById("closePopup");
+    const quoteTrigger = document.getElementById("quoteTrigger");
+    const galleryCards = Array.from(document.querySelectorAll(".gallery-card"));
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxVideo = document.getElementById("lightboxVideo");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const lightboxPrev = document.getElementById("lightboxPrev");
+    const lightboxNext = document.getElementById("lightboxNext");
+    let currentImageIndex = 0;
 
-</section>
+    const openPopup = () => {
+      popup.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    };
 
-<!-- ================= LIGHTBOX ================= -->
+    const closePopup = () => {
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
+    };
 
-<div class="lightbox" id="lightbox">
-  <img src="" alt="">
-</div>
+    if (quoteTrigger) {
+      quoteTrigger.addEventListener("click", openPopup);
+    }
 
-<footer>
-  © 2026 Viruksha Events. All Rights Reserved.
-</footer>
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closePopup);
+    }
 
-<!-- ================= JAVASCRIPT ================= -->
+    if (popup) {
+      popup.addEventListener("click", (event) => {
+        if (event.target === popup) {
+          closePopup();
+        }
+      });
 
-<script>
+      setTimeout(openPopup, 10000);
+    }
 
-/* Toggle Mobile Menu */
-const navMenu = document.getElementById("nav-menu");
-const navToggle = document.getElementById("nav-toggle");
+    const markGalleryCardLoaded = (card) => {
+      card.classList.add("is-loaded");
+    };
 
-navToggle.addEventListener("click",()=>{
-  navMenu.classList.toggle("show-menu");
-});
+    const hydrateCardImage = (image) => {
+      if (!image || !image.dataset.src || image.dataset.hydrated === "true") return;
 
-/* Scroll Background */
-window.addEventListener("scroll",()=>{
-  const header = document.getElementById("header");
-  if(window.scrollY >= 80){
-    header.classList.add("scroll-header");
-  }else{
-    header.classList.remove("scroll-header");
-  }
-});
+      image.src = image.dataset.src;
+      image.dataset.hydrated = "true";
+    };
 
-/* Filter Logic */
-const filterBtns = document.querySelectorAll(".filter-btn");
-const galleryItems = document.querySelectorAll(".gallery-item");
+    const hydrateCardVideo = (video, preload = "metadata") => {
+      if (!video || video.dataset.hydrated === "true") return;
 
-filterBtns.forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.querySelector(".filter-btn.active").classList.remove("active");
-    btn.classList.add("active");
+      const source = video.querySelector("source");
+      if (!source?.dataset.src) return;
 
-    const filter = btn.dataset.filter;
+      source.src = source.dataset.src;
+      video.preload = preload;
+      video.load();
+      video.dataset.hydrated = "true";
+    };
 
-    galleryItems.forEach(item=>{
-      if(filter === "all" || item.classList.contains(filter)){
-        item.style.display = "block";
-      }else{
-        item.style.display = "none";
+    const hydrateCardMedia = (card, options = {}) => {
+      const { priority = false } = options;
+      const cardImage = card?.querySelector("img");
+      const cardVideo = card?.querySelector("video");
+
+      if (cardImage) {
+        hydrateCardImage(cardImage);
+      }
+
+      if (cardVideo) {
+        hydrateCardVideo(cardVideo, priority ? "auto" : "metadata");
+      }
+    };
+
+    galleryCards.forEach((card) => {
+      const cardImage = card.querySelector("img");
+      const cardVideo = card.querySelector("video");
+
+      if (cardImage) {
+        if (cardImage.complete) {
+          markGalleryCardLoaded(card);
+        } else {
+          cardImage.addEventListener("load", () => markGalleryCardLoaded(card), { once: true });
+          cardImage.addEventListener("error", () => markGalleryCardLoaded(card), { once: true });
+        }
+      }
+
+      if (cardVideo) {
+        const markVideoReady = () => markGalleryCardLoaded(card);
+        cardVideo.addEventListener("loadeddata", markVideoReady, { once: true });
+        cardVideo.addEventListener("error", markVideoReady, { once: true });
       }
     });
-  });
-});
 
-/* Lightbox */
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = lightbox.querySelector("img");
+    const primeGalleryVideo = (video) => {
+      if (!video || video.dataset.primed === "true") return;
 
-galleryItems.forEach(item=>{
-  item.addEventListener("click",()=>{
-    lightbox.classList.add("active");
-    lightboxImg.src = item.querySelector("img").src;
-  });
-});
+      hydrateCardVideo(video, "metadata");
+      video.dataset.primed = "true";
+    };
 
-lightbox.addEventListener("click",()=>{
-  lightbox.classList.remove("active");
-});
+    galleryCards.slice(0, 6).forEach((card) => {
+      hydrateCardMedia(card, { priority: true });
+    });
 
-</script>
+    if ("IntersectionObserver" in window) {
+      const galleryCardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const card = entry.target;
+          const cardVideo = card.querySelector("video");
+          const isVisible = entry.isIntersecting;
 
+          if (isVisible || entry.boundingClientRect.top < window.innerHeight * 1.8) {
+            hydrateCardMedia(card, { priority: isVisible });
+          }
+
+          if (cardVideo && isVisible) {
+            primeGalleryVideo(cardVideo);
+            cardVideo.play().catch(() => {});
+          } else if (cardVideo && entry.boundingClientRect.top < window.innerHeight * 1.6) {
+            primeGalleryVideo(cardVideo);
+          }
+
+          if (!isVisible) return;
+
+          card.classList.add("is-visible");
+
+          if (cardVideo) {
+            cardVideo.play().catch(() => {});
+          }
+
+          galleryCardObserver.unobserve(card);
+        });
+      }, {
+        rootMargin: "900px 0px",
+        threshold: 0.01,
+      });
+
+      galleryCards.forEach((card) => {
+        const cardVideo = card.querySelector("video");
+        if (cardVideo && card.getBoundingClientRect().top < window.innerHeight * 1.6) {
+          primeGalleryVideo(cardVideo);
+        }
+
+        galleryCardObserver.observe(card);
+      });
+    } else {
+      galleryCards.forEach((card) => {
+        const cardVideo = card.querySelector("video");
+        if (cardVideo) {
+          primeGalleryVideo(cardVideo);
+          cardVideo.play().catch(() => {});
+        }
+      });
+    }
+
+    const renderLightbox = (index) => {
+      const card = galleryCards[index];
+      hydrateCardMedia(card, { priority: true });
+      const image = card?.querySelector("img");
+      const video = card?.querySelector("video");
+
+      if (!image && !video) return;
+
+      currentImageIndex = index;
+
+      if (image) {
+        lightboxImage.style.display = "block";
+        lightboxVideo.style.display = "none";
+        lightboxVideo.pause();
+        lightboxVideo.removeAttribute("src");
+        lightboxVideo.load();
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+      }
+
+      if (video) {
+        const source = video.querySelector("source");
+        const videoSrc = source ? (source.getAttribute("src") || source.dataset.src) : video.getAttribute("src");
+        lightboxImage.style.display = "none";
+        lightboxImage.src = "";
+        lightboxImage.alt = "";
+        lightboxVideo.style.display = "block";
+        lightboxVideo.src = videoSrc;
+        lightboxVideo.currentTime = 0;
+        lightboxVideo.play().catch(() => {});
+      }
+
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+      lightboxImage.alt = "";
+      lightboxImage.style.display = "block";
+      lightboxVideo.pause();
+      lightboxVideo.removeAttribute("src");
+      lightboxVideo.style.display = "none";
+      lightboxVideo.load();
+      document.body.style.overflow = popup && popup.style.display === "flex" ? "hidden" : "auto";
+    };
+
+    const showNext = () => {
+      renderLightbox((currentImageIndex + 1) % galleryCards.length);
+    };
+
+    const showPrev = () => {
+      renderLightbox((currentImageIndex - 1 + galleryCards.length) % galleryCards.length);
+    };
+
+    galleryCards.forEach((card, index) => {
+      card.addEventListener("click", () => renderLightbox(index));
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          renderLightbox(index);
+        }
+      });
+    });
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener("click", closeLightbox);
+    }
+
+    if (lightboxNext) {
+      lightboxNext.addEventListener("click", showNext);
+    }
+
+    if (lightboxPrev) {
+      lightboxPrev.addEventListener("click", showPrev);
+    }
+
+    if (lightbox) {
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    window.addEventListener("load", () => {
+      const callBtn = document.querySelector(".floating-btn.call");
+
+      if (!callBtn) return;
+
+      setTimeout(() => {
+        callBtn.classList.add("attention", "show-tooltip");
+
+        setTimeout(() => {
+          callBtn.classList.remove("show-tooltip");
+        }, 3000);
+      }, 1200);
+    });
+
+    const handlePageScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (scrollTopBtn) {
+        scrollTopBtn.classList.toggle("show", currentScrollY > 120);
+      }
+
+      if (siteNav && !navLinks.classList.contains("open")) {
+        const shouldHideNav = currentScrollY > 140 && currentScrollY > lastScrollY;
+        siteNav.classList.toggle("nav-hidden", shouldHideNav);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    let isScrollTicking = false;
+    const requestPageScrollUpdate = () => {
+      if (isScrollTicking) return;
+
+      isScrollTicking = true;
+      window.requestAnimationFrame(() => {
+        handlePageScroll();
+        isScrollTicking = false;
+      });
+    };
+
+    window.addEventListener("scroll", requestPageScrollUpdate, { passive: true });
+    handlePageScroll();
+
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox || !lightbox.classList.contains("open")) return;
+
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowRight") showNext();
+      if (event.key === "ArrowLeft") showPrev();
+    });
+  </script>
 </body>
+
 </html>
